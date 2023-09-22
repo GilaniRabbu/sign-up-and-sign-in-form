@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="shortcut icon" href="favicon.svg" type="svg">
+
+  <script src="https://kit.fontawesome.com/3b161c540c.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+
+  <title>Registration Form</title>
+</head>
+
+<body>
+  <section id="registration">
+    <div class="container">
+      <h1>Registration Form</h1>
+      <form action="#" onsubmit="return validateForm()">
+        <input type="text" class="input" name="name" id="name" placeholder="Name">
+        <br><br>
+        <input type="email" class="input" name="email" id="email" placeholder="Email Address">
+        <br><br>
+        <input type="text" class="input" name="country" id="country" placeholder="Country">
+        <br><br>
+        <input type="tel" class="input" name="phone" id="phone" placeholder="123-456-789">
+        <br><br>
+        <div class="row">
+          <input type="password" class="input" name="password" id="password" placeholder="Password">
+          <i class="fa-regular fa-eye-slash"></i>
+        </div>
+        <label for="checkbox">
+          <input type="checkbox" id="checkbox"> I accept terms and conditions.
+        </label>
+        <button type="submit">Create Account</button>
+        <p>Already have an account? <a id="sign-in-link" href="#">Sign in</a></p>
+        <div id="error-message" class="error-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="login" style="display: none;">
+    <div class="container">
+      <h2>Sign In</h2>
+      <form action="#" onsubmit="return validateLoginForm()">
+        <input type="text" class="input" name="name" id="login-name" placeholder="User Name">
+        <br><br>
+        <div class="row">
+          <input type="password" class="input" name="password" id="login-password" placeholder="Password">
+          <i class="fa-solid fa-eye-low-vision"></i>
+        </div>
+        <button type="submit">Sign In</button>
+        <p>
+          Not Registered?
+          <a id="create-account-link" href="#">Create an Account</a>
+        </p>
+        <div id="login-error-message" class="error-message"></div>
+      </form>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
